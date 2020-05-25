@@ -15,6 +15,8 @@
         </div> 
         <div id="navi">
            <?php
+           include "sidebar/sideBar.php";
+           ?>
         </div>
         <div id="footer">
            <p>Copyright &copy; Powsikan 2020</p>
