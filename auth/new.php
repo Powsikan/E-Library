@@ -12,13 +12,15 @@
              <h1>E-Library Management System</h1>
         </div>  
         <div id="wrapper">
-        <h3 class="heding">Admin Login Here</h3>
+        <h3 class="heding">New User Register Here</h3>
             <div class="center">
             <form action="">
                 <label for="">Name</label>
-                <input type="text" name="aname" required>
+                <input type="text" name="uname" required>
+                <label for="">Email</label>
+                <input type="text" name="umail" required>
                 <label for="">Password</label>
-                <input type="password" name="apass" required>
+                <input type="password" name="upass" required>
                 <button type="submit">Login Now</button>
             </form>
             </div>
