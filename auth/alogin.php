@@ -14,7 +14,13 @@
         <div id="wrapper">
             <h3 class="heding">Admin Login Here</h3>
             <div class="center">
-            <form action="">
+               <?php
+               if(isset($_POST["submit"])){
+                   echo "good"
+               }
+               ?>
+
+            <form action="alogin.php" method="post">
                 <label for="">Name</label>
                 <input type="text" name="aname" required>
                 <label for="">Password</label>
