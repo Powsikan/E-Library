@@ -19,6 +19,7 @@ body{
     height: auto;
     width: 700px;
     margin: 0 auto;
+    text-align: left;
 }
 #wrapper{
     float: right;
@@ -27,6 +28,7 @@ body{
 #navi{
     float: left;
     height: 500px;
+    width: 200px;
     background-color: #bf9393;
 }
 #navi ul{
@@ -45,4 +47,15 @@ body{
 #footer p{
     margin: 0;
     padding: 5px 10px;
+}
+a{
+    padding: 5px;
+    text-decoration: none;
+    color: #000;
+}
+a:hover{
+    color: green;
+}
+p{
+    margin: 0 10px 10px;
 }

@@ -14,13 +14,7 @@
         <div id="wrapper">
         </div> 
         <div id="navi">
-            <ul>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-
-            </ul>
+           <?php
         </div>
         <div id="footer">
            <p>Copyright &copy; Powsikan 2020</p>
