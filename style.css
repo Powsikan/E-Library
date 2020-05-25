@@ -59,3 +59,19 @@ a:hover{
 p{
     margin: 0 10px 10px;
 }
+.heading{
+    text-align: center;
+}
+.center{
+   height: auto;
+   width: 300px; 
+   margin-left: 100px;
+}
+label,input,button,select,textarea{
+     display: block;
+     margin-top: 5px;
+     margin-bottom: 5px;
+}
+input,select,textarea{
+    width: 100%;
+}

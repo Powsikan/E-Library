@@ -12,6 +12,16 @@
              <h1>E-Library Management System</h1>
         </div>  
         <div id="wrapper">
+            <h3 class="heding">Admin Login Here</h3>
+            <div class="center">
+            <form action="">
+                <label for="">Name</label>
+                <input type="text" name="aname" required>
+                <label for="">Password</label>
+                <input type="password" name="apass" required>
+                <button type="submit">Login Now</button>
+            </form>
+            </div>
         </div> 
         <div id="navi">
            <?php
