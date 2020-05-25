@@ -9,3 +9,40 @@ body{
 #header{
     background-color: darkgray;
 }
+#header h1{
+    height: 80px;
+    line-height: 80px;
+    margin: 0;
+    padding-left: 10px;
+}
+#container{
+    height: auto;
+    width: 700px;
+    margin: 0 auto;
+}
+#wrapper{
+    float: right;
+    width: 500px;
+}
+#navi{
+    float: left;
+    height: 500px;
+    background-color: #bf9393;
+}
+#navi ul{
+    margin-left: 10px;
+    list-style-type: none;
+
+}
+#navi li{
+    margin-bottom: 5px;
+}
+#footer{
+    clear: both;
+    width: 100%;
+    background-color: #bfbd93;
+}
+#footer p{
+    margin: 0;
+    padding: 5px 10px;
+}
