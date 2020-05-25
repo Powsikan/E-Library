@@ -1,0 +1,11 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font: 90% calibri ,sans-serif;
+    text-align: center;
+}
+#header{
+    background-color: darkgray;
+}
