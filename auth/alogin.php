@@ -1,4 +1,5 @@
 <?php
+    session_start()
     include "database.php";
 ?>
 <!DOCTYPE html>
@@ -22,6 +23,8 @@
                    $sql="select * from admin where ANAME='{$_POST["aname"]}'and APASS='{$_POST["apass"]}'";
                   $res=$db->query($sql)
                   if($res->num_rows>0){
+                      $row=$res->fetch_assoc();
+                      $_SESSION["AID"]=$row["AID"];
                       header("location:./pages/ahome.php");
                   }else{
                       echo "<p class='error'>Invalid User Details</p>"
