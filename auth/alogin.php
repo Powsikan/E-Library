@@ -19,6 +19,7 @@
             <div class="center">
                <?php
                if(isset($_POST["submit"])){
+                   $sql="select * from admin where ANAME='$_POST["aname"]'and APASS='$_POST["apass"]'";
                    echo "good"
                }
                ?>
