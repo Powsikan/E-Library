@@ -1,5 +1,5 @@
 <?php
-    include "database.php"
+    include "database.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,8 +19,13 @@
             <div class="center">
                <?php
                if(isset($_POST["submit"])){
-                   $sql="select * from admin where ANAME='$_POST["aname"]'and APASS='$_POST["apass"]'";
-                   echo "good"
+                   $sql="select * from admin where ANAME='{$_POST["aname"]}'and APASS='{$_POST["apass"]}'";
+                  $res=$db->query($sql)
+                  if($res->num_rows>0){
+                       
+                  }else{
+                      echo "<p class='error'>Invalid User Details</p>"
+                  }
                }
                ?>
 
