@@ -22,7 +22,7 @@
                    $sql="select * from admin where ANAME='{$_POST["aname"]}'and APASS='{$_POST["apass"]}'";
                   $res=$db->query($sql)
                   if($res->num_rows>0){
-                       
+                      header("location:./pages/ahome.php");
                   }else{
                       echo "<p class='error'>Invalid User Details</p>"
                   }
