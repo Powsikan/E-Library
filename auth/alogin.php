@@ -25,7 +25,7 @@
                 <input type="text" name="aname" required>
                 <label for="">Password</label>
                 <input type="password" name="apass" required>
-                <button type="submit">Login Now</button>
+                <button type="submit" name="submit">Login Now</button>
             </form>
             </div>
         </div> 
