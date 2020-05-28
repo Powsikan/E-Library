@@ -12,7 +12,7 @@
              <h1>E-Library Management System</h1>
         </div>  
         <div id="wrapper">
-        <h3 class="heding">New User Register Here</h3>
+        <h3 class="heading">New User Register Here</h3>
             <div class="center">
             <form action="">
                 <label for="">Name</label>

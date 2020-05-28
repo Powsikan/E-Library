@@ -29,8 +29,14 @@ if(!isset($_SESSION["AID"])){
         <div id="wrapper">
             <h3 class="heading">Welcome Admin</h3>
             <div class="center">
-            
-            </div>
+            <ul class="record">
+                <li>Total Students : <?php echo countRecord("select * from student",$db) ?></li>
+                <li>Total Books : <?php echo countRecord("select * from book",$db) ?></li>
+                <li>Total Request : <?php echo countRecord("select * from request",$db) ?></li>
+                <li>Total Comments : <?php echo countRecord("select * from comment",$db) ?></li>
+
+            </ul>
+            </div> 
         </div> 
         <div id="navi">
            <?php

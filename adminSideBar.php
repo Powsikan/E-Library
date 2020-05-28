@@ -1,6 +1,6 @@
 <ul>
    <li><a href="ahome.php">Home</a></li>
-   <li><a href="vew_student.php">View Student</a></li>
+   <li><a href="view_student.php">View Student</a></li>
    <li><a href="upload_books.php">Upload Books</a></li>
    <li><a href="view_books.php">View Books</a></li>
    <li><a href="view_req.php">View Request</a></li>

@@ -15,7 +15,7 @@ body {
   margin: 0;
   padding-left: 10px;
 }
-#container {
+#Container {
   height: auto;
   width: 700px;
   margin: 0 auto;
@@ -87,4 +87,18 @@ textarea {
 .success {
   color: green;
   text-align: center;
+}
+.record {
+  list-style-type: square;
+}
+.record li {
+  margin-top: 15px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table td,
+table th {
+  border: 1px solid #ddd;
 }
