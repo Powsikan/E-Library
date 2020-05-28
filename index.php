@@ -15,7 +15,7 @@
         </div> 
         <div id="navi">
            <?php
-           include "sidebar/sideBar.php";
+           include "sideBar.php";
            ?>
         </div>
         <div id="footer">

@@ -1,6 +1,6 @@
 <?php
     session_start()
-    include "./database.php";
+    include "database.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Library</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="Container">
@@ -25,7 +25,7 @@
                   if($res->num_rows>0){
                       $row=$res->fetch_assoc();
                       $_SESSION["AID"]=$row["AID"];
-                      header("location:./pages/ahome.php");
+                      header("location:ahome.php");
                   }else{
                       echo "<p class='error'>Invalid User Details</p>"
                   }
@@ -43,7 +43,7 @@
         </div> 
         <div id="navi">
            <?php
-           include "sidebar/sideBar.php";
+           include "sideBar.php";
            ?>
         </div>
         <div id="footer">
