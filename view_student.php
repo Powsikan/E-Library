@@ -24,7 +24,7 @@ if(!isset($_SESSION["AID"])){
         </div>  
         <div id="wrapper">
             <h3 class="heading">View Student Details</h3>
-            <div class="center">
+           
             <?php
             $sql="select * from student";
             $res=$db->query($sql);
@@ -52,7 +52,7 @@ if(!isset($_SESSION["AID"])){
                 echo "<p class='error'>No Students Record Found</p>";
             }
             ?>
-            </div> 
+            
         </div> 
         <div id="navi">
            <?php
