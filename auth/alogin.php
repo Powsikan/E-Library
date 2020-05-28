@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Library</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div id="Container">
@@ -16,7 +16,7 @@
              <h1>E-Library Management System</h1>
         </div>  
         <div id="wrapper">
-            <h3 class="heding">Admin Login Here</h3>
+            <h3 class="heading">Admin Login Here</h3>
             <div class="center">
                <?php
                if(isset($_POST["submit"])){
