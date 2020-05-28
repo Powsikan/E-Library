@@ -1,7 +1,9 @@
 <?php
-    session_start()
-    include "database.php";
+    session_start();
+
+    include  "database.php";
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +28,8 @@
                       $row=$res->fetch_assoc();
                       $_SESSION["AID"]=$row["AID"];
                       header("location:ahome.php");
-                  }else{
+                  }
+                  else{
                       echo "<p class='error'>Invalid User Details</p>"
                   }
                }
