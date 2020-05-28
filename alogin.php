@@ -20,20 +20,22 @@
         <div id="wrapper">
             <h3 class="heading">Admin Login Here</h3>
             <div class="center">
-               <?php
-               if(isset($_POST["submit"])){
+            <?php
+               if(isset($_POST["submit"]))
+               {
                    $sql="select * from admin where ANAME='{$_POST["aname"]}'and APASS='{$_POST["apass"]}'";
-                  $res=$db->query($sql)
-                  if($res->num_rows>0){
+                  $res=$db->query($sql);
+                  if($res->num_rows>0)
+                  {
                       $row=$res->fetch_assoc();
                       $_SESSION["AID"]=$row["AID"];
                       header("location:ahome.php");
                   }
                   else{
-                      echo "<p class='error'>Invalid User Details</p>"
+                      echo "<p class='error'>Invalid User Details</p>";
                   }
                }
-               ?>
+            ?>
 
             <form action="alogin.php" method="post">
                 <label for="">Name</label>
