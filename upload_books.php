@@ -29,8 +29,6 @@ if(!isset($_SESSION["AID"])){
                     if(isset($_POST["submit"])){
                         $target_dir="upload/";
                         $target_file=$target_dir.basename($_FILES["efile"]["name"]);
-
-                       
                         if(move_uploaded_file($_FILES["efile"]["tmp_name"],$target_file)){
                             $s="insert into book(BTITLE,KEYWORDS,FILE) values('{$_POST["bname"]}','{$_POST["keys"]}','{$target_file}')";
                             $db->query($s);
