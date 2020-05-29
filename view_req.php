@@ -26,15 +26,15 @@ if(!isset($_SESSION["AID"])){
             <h3 class="heading">View Request Details</h3>
            
             <?php
-            $sql="select * from request";
+            $sql="select s.name,r.mes,r.logs from student s inner join request r on s.id=r.id";
             $res=$db->query($sql);
             if($res->num_rows>0){
                 echo "<table>
                     <tr>
                        <th>SNO</th>
                        <th>NAME</th>
-                       <th>EMAIL</th>
-                       <th>DEPARTMENT</th>
+                       <th>MESSAGE</th>
+                       <th>DATE</th>
                     </tr>
                 ";
                 $i=0;
@@ -42,9 +42,9 @@ if(!isset($_SESSION["AID"])){
                     $i++; 
                     echo "<tr>";
                     echo "<td>{$i}</td>";
-                    echo "<td>{$row["NAME"]}</td>";
-                    echo "<td>{$row["MAIL"]}</td>";
-                    echo "<td>{$row["DEP"]}</td>";
+                    echo "<td>{$row["name"]}</td>";
+                    echo "<td>{$row["mes"]}</td>";
+                    echo "<td>{$row["logs"]}</td>";
                     echo "</tr>";
                 }
                 echo "</table>";
