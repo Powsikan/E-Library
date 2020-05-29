@@ -22,7 +22,7 @@ if(!isset($_SESSION["ID"])){
              <h1>E-Library Management System</h1>
         </div>  
         <div id="wrapper">
-            <h3 class="heading">Welcome <?php echo $_SESSION["NAME"]?></h3>
+            <h3 class="heading">Welcome <?php echo $_SESSION["NAME"];?></h3>
         
         </div> 
         <div id="navi">
