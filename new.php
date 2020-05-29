@@ -36,7 +36,7 @@ include  "database.php";
                 <input type="email" name="mail" required>
                 <label for="">Password</label>
                 <input type="password" name="upass" required>
-                <select name="dep" id="">
+                <select name="dep" id="" required>
                 <option value="">Select</option>
                 <option value="SE">SE</option>
                 <option value="MIT">MIT</option>
