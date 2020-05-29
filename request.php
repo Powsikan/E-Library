@@ -27,7 +27,7 @@ if(!isset($_SESSION["ID"])){
            <div class="center">
                 <?php
                     if(isset($_POST["submit"])){
-                        $sql="insert into request(ID,MES,LOGS) values({$_SESSION["ID]},'{$_POST["mess"]}',now())";
+                        $sql="insert into request(ID,MES,LOGS) values({$_SESSION["ID"]},'{$_POST["mess"]}', now())";
                         $db->query($sql);
                        echo "<p class='success'>Request send Success</p>";
                        
