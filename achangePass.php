@@ -25,35 +25,7 @@ if(!isset($_SESSION["AID"])){
         <div id="wrapper">
             <h3 class="heading">View Comment Details</h3>
            
-            <?php
-            $sql="select b.btitle,s.name,c.comm,c.logs from  comment c inner join book b on b.bid=c.bid inner join student s on c.sid=s.id";
-            $res=$db->query($sql);
-            if($res->num_rows>0){
-                echo "<table>
-                    <tr>
-                       <th>SNO</th>
-                       <th>BOOK NAME</th>
-                       <th>STUDENT NAME</th>
-                       <th>COMMENT</th>
-                       <th>DATE</th>
-                    </tr>
-                ";
-                $i=0;
-                while($row=$res->fetch_assoc()){
-                    $i++; 
-                    echo "<tr>";
-                    echo "<td>{$i}</td>";
-                    echo "<td>{$row["btitle"]}</td>";
-                    echo "<td>{$row["name"]}</td>";
-                    echo "<td>{$row["comm"]}</td>";
-                    echo "<td>{$row["logs"]}</td>";
-                    echo "</tr>";
-                }
-                echo "</table>";
-            }else{
-                echo "<p class='error'>No Comment Found</p>";
-            }
-            ?>
+         
            
         </div> 
         <div id="navi">
