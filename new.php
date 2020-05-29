@@ -2,9 +2,6 @@
 session_start();
 include  "database.php";
 
-if(!isset($_SESSION["AID"])){
-    header("location:alogin.php");
-}
 ?> 
 <!DOCTYPE html>
 <html lang="en">
