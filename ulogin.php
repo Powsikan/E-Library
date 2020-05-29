@@ -1,3 +1,9 @@
+<?php
+    session_start();
+
+    include  "database.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,14 +18,32 @@
              <h1>E-Library Management System</h1>
         </div>  
         <div id="wrapper">
-        <h3 class="heading">User Login Here</h3>
+            <h3 class="heading">User Login Here</h3>
             <div class="center">
-            <form action="">
+            <?php
+               if(isset($_POST["submit"]))
+               {
+                   $sql="select * from student where NAME='{$_POST["uname"]}'and PASS='{$_POST["upass"]}'";
+                  $res=$db->query($sql);
+                  if($res->num_rows>0)
+                  {
+                      $row=$res->fetch_assoc();
+                      $_SESSION["ID"]=$row["ID"];
+                      $_SESSION["NAME"]=$row["NAME"];
+                      header("location:uhome.php");
+                  }
+                  else{
+                      echo "<p class='error'>Invalid User Details</p>";
+                  }
+               }
+            ?>
+
+            <form action="ulogin.php" method="post">
                 <label for="">Name</label>
                 <input type="text" name="uname" required>
                 <label for="">Password</label>
                 <input type="password" name="upass" required>
-                <button type="submit">Login Now</button>
+                <button type="submit" name="submit">Login Now</button>
             </form>
             </div>
         </div> 
