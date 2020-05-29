@@ -23,30 +23,21 @@ if(!isset($_SESSION["ID"])){
              <h1>E-Library Management System</h1>
         </div>  
         <div id="wrapper">
-            <h3 class="heading">Change Password</h3>
+            <h3 class="heading">New Book Request</h3>
            <div class="center">
                 <?php
                     if(isset($_POST["submit"])){
-                        $sql="select * from student where pass='{$_POST["opass"]}' and id='{$_SESSION["ID"]}'";
-                        $res=$db->query($sql);
-                        if($res->num_rows>0){
-                            $s="update student set pass='{$_POST["npass"]}' where id=".$_SESSION["ID"];
-                            $db->query($s);
-                            echo "<p class='success'>Password Changed Success</p>";
-                        }else{
-                            echo "<p class='error'>Invalid Password</p>";
-
-                        }
+                        $sql="insert into request(ID,MES,LOGS) values({$_SESSION["ID]},'{$_POST["mess"]}',now())";
+                        $db->query($sql);
+                       echo "<p class='success'>Request send Success</p>";
+                       
                     }
-
                 ?>
 
            <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post">
-           <label for="">Old Password</label>
-           <input type="password" name="opass" required>
-           <label for="">New Password</label>
-           <input type="password" name="npass" required>
-           <button type="submit" name="submit">Update Password</button>
+           <label for="">Message</label>
+           <textarea name="mess" id="" cols="30" rows="10" required></textarea>
+           <button type="submit" name="submit">Send Request</button>
            </form>
            </div>
          
