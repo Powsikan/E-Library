@@ -43,7 +43,7 @@ include  "database.php";
                 <option value="ENCM">ENCM</option>
                 <option value="PS">PS</option>
                 </select>
-                <button type="submit">Login Now</button>
+                <button type="submit">Register Now</button>
             </form>
             </div>
         </div> 
