@@ -23,7 +23,7 @@ if(!isset($_SESSION["ID"])){
              <h1>E-Library Management System</h1>
         </div>  
         <div id="wrapper">
-            <h3 class="heading">New Book Request</h3>
+            <h3 class="heading">Search Book</h3>
            <div class="center">
                 <?php
                     if(isset($_POST["submit"])){
@@ -35,9 +35,9 @@ if(!isset($_SESSION["ID"])){
                 ?>
 
            <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post">
-           <label for="">Message</label>
-           <textarea name="mess" id="" cols="30" rows="10" required></textarea>
-           <button type="submit" name="submit">Send Request</button>
+           <label for="">Enter Book Name Or Keywords</label>
+           <textarea name="name"  required></textarea>
+           <button type="submit" name="submit">Search Now</button>
            </form>
            </div>
          
