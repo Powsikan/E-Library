@@ -23,8 +23,32 @@ if(!isset($_SESSION["AID"])){
              <h1>E-Library Management System</h1>
         </div>  
         <div id="wrapper">
-            <h3 class="heading">View Comment Details</h3>
-           
+            <h3 class="heading">Change Password</h3>
+           <div class="center">
+                <?php
+                    if(isset($_POST["submit"])){
+                        $sql="select * from admin where apass='{$_POST["opass"]}' and aid='{$_SESSION["AID"]}'";
+                        $res=$db->query($sql);
+                        if($res->num_rows>0){
+                            $s="update admin set apass='{$_POST["npass"]}' where aid=".$_SESSION["AID"];
+                            $db->query($s);
+                            echo "<p class='success'>Password Changed Success</p>";
+                        }else{
+                            echo "<p class='error'>Invalid Password</p>";
+
+                        }
+                    }
+
+                ?>
+
+           <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post">
+           <label for="">Old Password</label>
+           <input type="password" name="opass" required>
+           <label for="">New Password</label>
+           <input type="password" name="npass" required>
+           <button type="submit" name="submit">Update Password</button>
+           </form>
+           </div>
          
            
         </div> 
