@@ -57,7 +57,11 @@ if(!isset($_SESSION["ID"])){
                     $res=$db->query($sql);
                     if($res->num_rows>0){
                        while($row=$res->fetch_assoc()){
-                            
+                            echo "<p>
+                                <strong>{$row["name"]}</strong>
+                                {$row["comm"]}
+                                <i>{$row["logs"]}</i>
+                            </p>";
                        } 
                     }else{
                         echo "<p class='error'>No Comments Yet..</p>"
