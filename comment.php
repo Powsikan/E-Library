@@ -45,7 +45,7 @@ if(!isset($_SESSION["ID"])){
                 }
             ?>
            <div class="center">
-           <form action="">
+           <form action="<?php echo $_SERVER["REQUEST_URI"]; ?>" method="post" >
            <label for="">Your Comment</label>
            <textarea name="mes" id="" required></textarea>
            <button type="submit" name="submit">Post Now</button>
