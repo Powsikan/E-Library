@@ -29,7 +29,7 @@ if(!isset($_SESSION["ID"])){
 
            <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post">
            <label for="">Enter Book Name Or Keywords</label>
-           <input type="text" name="name"  required></input>
+           <input type="text" name="name"  required>
            <button type="submit" name="submit">Search Now</button>
            </form>
            </div>
