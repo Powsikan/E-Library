@@ -52,6 +52,18 @@ if(!isset($_SESSION["ID"])){
            </form>
               
            </div>
+                <?php
+                    $sql="select s.name,c.comm,c.logs from comment c inner join student s on c.sid=s.id where c.bid={$_GET["id"]} order by c.cid desc";
+                    $res=$db->query($sql);
+                    if($res->num_rows>0){
+                       while($row=$res->fetch_assoc()){
+                            
+                       } 
+                    }else{
+                        echo "<p class='error'>No Comments Yet..</p>"
+                    }
+                ?>
+
         </div> 
         <div id="navi">
            <?php
