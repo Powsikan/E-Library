@@ -44,6 +44,7 @@ if(!isset($_SESSION["ID"])){
                        <th>BOOK NAME</th>
                        <th>KEYWORDS</th>
                        <th>VIEW</th>
+                       <th>COMMENT</th>
                     </tr>
                 ";
                 $i=0;
