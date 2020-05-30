@@ -102,3 +102,11 @@ table td,
 table th {
   border: 1px solid #ddd;
 }
+strong{
+  color: green;
+  padding: 5px;
+}
+i{
+  color: blue;
+  padding: 5px;
+}
