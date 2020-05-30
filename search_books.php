@@ -35,7 +35,7 @@ if(!isset($_SESSION["ID"])){
            </div>
            <?php
            if(isset($_POST["submit"])){
-            $sql="select * from book where BTITLE like '%{$_POST["name"]}%' and keywords like '%{$_POST["name"]}%'";
+            $sql="select * from book where BTITLE like '%{$_POST["name"]}%' and KEYWORDS like '%{$_POST["name"]}%'";
             $res=$db->query($sql);
             if($res->num_rows>0){
                 echo "<table>
