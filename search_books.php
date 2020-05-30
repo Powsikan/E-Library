@@ -29,7 +29,7 @@ if(!isset($_SESSION["ID"])){
 
            <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post">
            <label for="">Enter Book Name Or Keywords</label>
-           <textarea name="name"  required></textarea>
+           <input type="text" name="name"  required></input>
            <button type="submit" name="submit">Search Now</button>
            </form>
            </div>
@@ -54,6 +54,8 @@ if(!isset($_SESSION["ID"])){
                     echo "<td>{$row["BTITLE"]}</td>";
                     echo "<td>{$row["KEYWORDS"]}</td>";
                     echo "<td><a href='{$row["FILE"]}' target='_blank'>View</a></td>";
+                    echo "<td><a href='comment.php?id={$row["BID"]}'>Go</a></td>";
+
                     echo "</tr>";
                 }
                 echo "</table>";
