@@ -25,6 +25,11 @@ if(!isset($_SESSION["ID"])){
         <div id="wrapper">
             <h3 class="heading">Send Your Comment </h3>
             <?php
+                  if(isset($_POST["submit"])){
+                    $s="insert into comment(BID,SID,COMM,LOGS) values({$_GET["id"]},{$_SESSION["ID"]},'{$_POST["mes"]}',now())";
+                    $db->query($s);
+            }
+
                 $sql="select * from book where BID=".$_GET["id"];
                 $res=$db->query($sql);
                 if($res->num_rows>0){
