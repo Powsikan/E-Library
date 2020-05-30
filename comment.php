@@ -28,6 +28,19 @@ if(!isset($_SESSION["ID"])){
                 $sql="select * from book where BID=".$_GET["id"];
                 $res=$db->query($sql);
                 if($res->num_rows>0){
+                    echo "<table>";
+                    $row=$res->fetch_assoc();
+                    echo "<tr>
+                             <th>Book Name</th>
+                             <td>{$row["BTITLE"]}</td>
+                          </tr>   
+                          <tr>
+                             <th>Keywords</th>
+                             <td>{$row["KEYWORDS"]}</td>
+                          </tr>  
+                    ";
+                    echo "</table>";
+
 
                 }
             ?>
